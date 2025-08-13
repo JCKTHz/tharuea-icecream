@@ -1,0 +1,377 @@
+/* ==============================
+   ร้านไอติมท่าเรือ — ธีมเขียวมหาชัย (สะอาด ไม่ซ้ำ)
+   ============================== */
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Theme Vars ---------- */
+:root{
+  --bg: #fbfff9;           /* พื้นหลังเขียวอ่อน */
+  --text: #1f2937;         /* ตัวอักษรหลัก */
+  --muted-text: #6b7280;   /* ข้อความรอง */
+  --primary: #1ec28b;      /* เขียวสดใส */
+  --primary-dark: #12a376; /* เขียวเข้ม (hover) */
+  --accent: #f7f1e6;       /* โทนครีมกะทิ */
+  --card-border: #40584d; /* ขอบการ์ด */
+  --radius: 14px;
+  --shadow: 0 8px 22px rgba(30,194,139,.08);
+  --container: 1100px;
+}
+
+/* ---------- Base ---------- */
+body{
+  font-family: "Noto Sans Thai", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.container { width: min(92%, var(--container)); margin: 0 auto; }
+section { padding: 32px 0; }
+
+/* ---------- Header ---------- */
+/* ===== Fix header: keep green gradient, remove inner box ===== */
+
+/* คงพื้นหลังไล่สีไว้ตามธีมเดิม */
+header{
+  background: linear-gradient(90deg, var(--primary) 0%, #5be0b3 100%);
+  color: #fff;
+  padding: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+/* ลบพื้นหลัง/ขอบ/เงา ของกล่องด้านในทั้งหมดที่อยู่ใน header */
+header .container,
+header .wrap,
+header nav,
+header h1{
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* จัดเลย์เอาต์ข้อความกับเมนู */
+header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* ชื่อร้าน (คลิกกลับหน้าแรกได้ ถ้าใส่ <a> ครอบ) */
+header h1{
+  margin:0;
+  font-size:1.5rem;
+  font-weight:900;
+}
+header h1 a{
+  color:#fff;
+  text-decoration:none;
+}
+
+/* เมนูลิงก์ + เอฟเฟกต์ hover */
+nav a{
+  margin-left:16px;
+  color:#ffffff;
+  font-weight:700;
+  position:relative;
+  opacity:.95;
+  transition: color .15s ease, opacity .15s ease;
+}
+nav a:hover{
+  color:#ffffff;
+  opacity:1;
+}
+nav a.is-active::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-6px;
+  height:3px; background:#ffffff; border-radius:2px;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding: 40px 0 24px;
+}
+.hero .container{
+  background: var(--accent);
+  border: 1px solid #efe7d6;
+  border-radius: 12px;
+  padding: 18px;
+}
+.hero h2{ font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem); margin:0 0 8px; font-weight:900; color: var(--primary-dark); }
+.hero p{ color: var(--muted-text); }
+
+/* ---------- Buttons ---------- */
+.button{ display:inline-block; padding:12px 18px; border-radius:10px; font-weight:700; transition:.08s transform, .2s box-shadow; }
+.button-primary{ background: var(--primary); color:#fff; box-shadow: 0 8px 18px rgba(30,194,139,.25); }
+.button-primary:hover{ background: var(--primary-dark); transform: translateY(-1px); }
+.button-outline{ border:2px solid var(--text); color: var(--text); }
+.button-outline:hover{ background:#fff; box-shadow: var(--shadow); }
+
+/* ---------- Grid Helpers ---------- */
+.grid{ display:grid; gap:16px; }
+@media (min-width: 640px){ .grid-2{ grid-template-columns: repeat(2,1fr); } }
+@media (min-width: 900px){ .grid-3{ grid-template-columns: repeat(3,1fr); } }
+
+/* ---------- Cards ---------- */
+.card{
+  background:#fff;
+  border:1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+.card-body{ padding:14px 16px; }
+.card h3{ margin:0; font-size:1.05rem; font-weight:800; color: var(--primary-dark); }
+.card p{ margin:6px 0 0; color: var(--muted-text); font-size:.95rem; }
+.card .price{ margin-top:8px; font-weight:800; }
+
+/* ---------- Badges ---------- */
+.badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.badge{ border:1px solid rgba(0,0,0,.1); background:#fff; color: var(--muted-text); padding:6px 10px; border-radius:999px; font-size:.82rem; }
+.badge--new{ background: var(--accent); color: var(--text); font-weight:700; border-color: #eddcc2; }
+
+/* ---------- Gallery ---------- */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+  gap: 16px;
+}
+.gallery figure{
+  background:#fff;
+  border:1px solid var(--card-border);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow: var(--shadow);
+}
+.gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.gallery figcaption{
+  padding:.75rem 1rem;
+  font-weight:600;
+  color:#0f5132;
+}
+
+/* ---------- Footer ---------- */
+footer{
+  background: #e6f7ef;
+  text-align:center;
+  padding:16px 0;
+  color: var(--muted-text);
+  border-top: 1px solid var(--card-border);
+}
+
+/* ===== รูปการ์ดเมนู: ใหญ่ ชัด เท่ากันทุกใบ ===== */
+.card-img{
+  width: 100%;
+  height: 240px;        /* ปรับความสูงรูปที่นี่ */
+  object-fit: cover;    /* ครอบเต็มกรอบ ไม่บิดรูป */
+  object-position: center 30%; /* ขยับเฟรมให้เห็นสกูปเด่นขึ้น */
+  display: block;
+  border-bottom: 1px solid var(--card-border);
+  background: #fff;     /* กันพื้นหลังลายหลุด */
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+/* มือถือ: สูงน้อยลงนิดนึงให้พอดีจอ */
+@media (max-width: 600px){
+  .card-img{ height: 200px; }
+}
+
+/* ถ้าอยากให้ไม่ตัดรูปเลย ให้ใช้ contain แทน (เปิดอันนี้และคอมเมนต์ object-fit: cover ด้านบน)
+.card-img{ object-fit: contain; background:#fff; }
+*/
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* ระยะห่างระหว่างโลโก้กับชื่อ */
+}
+
+.logo-title img {
+  height: 40px; /* ปรับขนาดโลโก้ */
+  width: auto;
+}
+
+/* ===== Hero: สองคอลัมน์ + รูปด้านขวา ===== */
+.hero .container.hero-wrap{
+  display: grid;
+  grid-template-columns: 1fr;     /* มือถือ: 1 คอลัมน์ */
+  align-items: center;
+  gap: 18px;
+}
+
+@media (min-width: 900px){
+  .hero .container.hero-wrap{
+    grid-template-columns: 1.2fr 1fr; /* เดสก์ท็อป: ข้อความ : รูป */
+  }
+}
+
+.hero-text p{ color: var(--muted-text); }
+
+.hero-media{
+  display: grid;
+  place-items: center;
+}
+
+.hero-media img{
+  width: 100%;
+  max-width: 460px;        /* จำกัดความกว้างรูป */
+  height: 260px;           /* ความสูงคงที่ให้สมูท */
+  object-fit: contain;     /* ไม่ครอปรูป */
+  border-radius: 12px;     /* ถ้าอยากให้มุมมน */
+  background: #fff;        /* กันพื้นหลังโปร่ง */
+  box-shadow: 0 10px 26px rgba(0,0,0,.06);
+}
+
+@media (max-width: 600px){
+  .hero-media img{ height: 220px; }
+}
+
+.order-row {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.order-row label {
+  display: flex;
+  flex-direction: column;
+  font-size: .92rem;
+  gap: 6px;
+}
+.order-row select,
+.order-row input[type="number"] {
+  padding: 8px 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+}
+
+#toast-container {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+.toast {
+  background: #ecfff6;
+  border: 1px solid #baf3d1;
+  color: #0f5132;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  font-weight: 700;
+  min-width: 220px;
+}
+.toast .small {
+  display: block;
+  font-weight: 500;
+  opacity: .8;
+}
+
+/* ===== ทำให้ฟอร์มใช้ฟอนต์/สไตล์เดียวกับทั้งเว็บ ===== */
+input, select, textarea, button {
+  font: inherit;          /* ดึงฟอนต์/ขนาดจาก body */
+  color: inherit;
+}
+
+/* คอนโทรลในฟอร์มสั่ง */
+.order-row select,
+.order-row input[type="number"]{
+  height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: #fff;
+  line-height: 1.2;
+
+  /* ตัดสไตล์ดั้งเดิมของเบราว์เซอร์ให้เหมือนกัน */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* ลูกศร dropdown แบบ SVG ในตัว (ไม่ต้องแก้ HTML) */
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231f2937' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 8px;
+  padding-right: 34px; /* เผื่อที่ให้ลูกศร */
+}
+
+.order-row select:focus,
+.order-row input[type="number"]:focus{
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+.order-row .button{
+  height: 42px;                 /* สูงเท่าช่องกรอก */
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+input, select, textarea, button {
+  font: inherit;
+  color: inherit;
+}
+
+.order-row select,
+.order-row input[type="number"] {
+  height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: #fff;
+  line-height: 1.2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231f2937' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 8px;
+  padding-right: 34px;
+}
+
+.order-row select:focus,
+.order-row input[type="number"]:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+.order-row .button {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+/* บังคับรูปบนการ์ดทุกใบ แม้ลืมใส่ class="card-img" */
+.card > img{
+  display:block;
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  object-position:center 30%;
+}
+@media (max-width:600px){
+  .card > img{ height:200px; }
+}
+
+.card > img{ display:block; width:100%; height:240px; object-fit:cover; object-position:center 30%; }
+@media (max-width:600px){ .card > img{ height:200px; } }
