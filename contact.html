@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เมนู — ร้านไอติมท่าเรือ</title>
+
+  <!-- ฟอนต์ + สไตล์เหมือนหน้าแรก -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <!-- Header (ลิงก์กลับหน้าแรก/ติดต่อ) -->
+  <header>
+    <div class="container wrap">
+      <h1><a href="index.html" style="color:inherit; text-decoration:none;">ร้านไอติมท่าเรือ</a></h1>
+      <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a href="menu.html">เมนู</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contact" style="padding:2rem;">
+      <div class="container">
+        <h2>ติดต่อเรา</h2>
+        <p>📞 โทร: 098-568-9830</p>
+        <p>💬 LINE: ไม่มีเพิ่งสร้าง</p>
+        <p>📍 ที่อยู่: 60 หมู่ 3 ถนนสายเอเซีย, ตำบลหันตรา อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> ร้านไอติมท่าเรือ</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เมนู — ร้านไอติมท่าเรือ</title>
+
+  <!-- ฟอนต์ + สไตล์เหมือนหน้าแรก -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container wrap">
+      <h1><a href="index.html" style="color:inherit; text-decoration:none;">ร้านไอติมท่าเรือ</a></h1>
+      <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a href="menu.html" class="is-active">เมนู</a>
+        <a href="contact.html">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- เมนูวันนี้ -->
+<section id="menu">
+  <div class="container"
+       style="background:#f5fff7;border:1px solid #e8f5ef;border-radius:14px;padding:18px;box-shadow:0 8px 22px rgba(30,194,139,.08);">
+    <h3 style="font-size:1.4rem; font-weight:900; margin-bottom:12px;">เมนูวันนี้</h3>
+
+<div class="grid grid-3">
+  <!-- กะทิ -->
+  <article class="card">
+    <img class="card-img" src="assets/images/กะทิ.png" alt="กะทิ">
+    <div class="card-body">
+      <h3>กะทิ</h3>
+      <p>หอมมันจากกะทิสด ทำสดทุกวัน</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <div class="badges">
+        <span class="badge badge--new">เมนูใหม่</span>
+        <span class="badge">โฮมเมด</span>
+      </div>
+      <form class="order-form" data-item="กะทิ">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <!-- ช็อกโกแลตชิพ -->
+  <article class="card">
+    <img class="card-img" src="assets/images/ช็อคโกแล็ตชิพ.png" alt="ช็อกโกแลตชิพ">
+    <div class="card-body">
+      <h3>ช็อกโกแลตชิพ</h3>
+      <p>ช็อกโกแลตเข้มข้นพร้อมชิพกรุบ</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <div class="badges">
+        <span class="badge">ฮิต</span>
+      </div>
+      <form class="order-form" data-item="ช็อกโกแลตชิพ">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <!-- ชาเขียว -->
+  <article class="card">
+    <img class="card-img" src="assets/images/ชาเขียว.png" alt="ชาเขียว">
+    <div class="card-body">
+      <h3>ชาเขียว</h3>
+      <p>ชาเขียวมัทฉะแท้ หอมละมุน</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <div class="badges">
+        <span class="badge">มัทฉะ</span>
+      </div>
+      <form class="order-form" data-item="ชาเขียว">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <!-- วนิลาชิพ -->
+  <article class="card">
+    <img class="card-img" src="assets/images/วนิลาชิพ.png" alt="วนิลาชิพ">
+    <div class="card-body">
+      <h3>วนิลาชิพ</h3>
+      <p>วนิลาหอมๆ พร้อมช็อกโกแลตชิพ</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <form class="order-form" data-item="วนิลาชิพ">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <!-- สตรอว์เบอร์รี -->
+  <article class="card">
+    <img class="card-img" src="assets/images/สตรอเบอรี่.png" alt="สตรอว์เบอร์รี">
+    <div class="card-body">
+      <h3>สตรอว์เบอร์รี</h3>
+      <p>ผลไม้แท้ หวานอมเปรี้ยว สดชื่น</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <div class="badges">
+        <span class="badge">ผลไม้แท้</span>
+      </div>
+      <form class="order-form" data-item="สตรอว์เบอร์รี">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <!-- ชาไทย -->
+  <article class="card">
+    <img class="card-img" src="assets/images/ชาไทย.jpg" alt="ชาไทย">
+    <div class="card-body">
+      <h3>ชาไทย</h3>
+      <p>ชาไทยหอมเข้ม หวานมันลงตัว</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <form class="order-form" data-item="ชาไทย">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <!-- กาแฟ -->
+  <article class="card">
+    <img class="card-img" src="assets/images/กาแฟ.png" alt="กาแฟ">
+    <div class="card-body">
+      <h3>กาแฟ</h3>
+      <p>กาแฟคั่วบดหอม เข้มข้น</p>
+      <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โคน 15฿ · ขนมปัง 30฿</div>
+      <form class="order-form" data-item="กาแฟ">
+        <div class="order-row">
+          <label>ขนาด
+            <select name="size">
+              <option value="20" data-label="ถ้วยเล็ก">ถ้วยเล็ก 20฿</option>
+              <option value="25" data-label="ถ้วยใหญ่">ถ้วยใหญ่ 25฿</option>
+              <option value="15" data-label="โคน">โคน 15฿</option>
+              <option value="30" data-label="ขนมปัง">ขนมปัง 30฿</option>
+            </select>
+          </label>
+          <label>จำนวน
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+          <button type="submit" class="button button-primary">สั่ง</button>
+        </div>
+      </form>
+    </div>
+  </article>
+</div>
+
+
+    <div style="margin-top:12px;">
+      <a class="button button-primary" href="menu.html">ดูเมนูทั้งหมด</a>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> ร้านไอติมท่าเรือ</small>
+    </div>
+  </footer>
+  <script>
+function orderItem(name, sizeId, qtyId) {
+  const sizeElement = document.getElementById(sizeId);
+  const qtyElement = document.getElementById(qtyId);
+  const sizeText = sizeElement.options[sizeElement.selectedIndex].text;
+  const price = parseInt(sizeElement.value, 10);
+  const qty = parseInt(qtyElement.value, 10);
+  const total = price * qty;
+
+  alert(`สั่งซื้อสำเร็จ!\n\nสินค้า: ${name}\nขนาด: ${sizeText}\nจำนวน: ${qty}\nรวม: ${total}฿`);
+}
+</script>
+</body>
+</html>

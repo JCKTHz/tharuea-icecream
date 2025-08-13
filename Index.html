@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ร้านไอติมท่าเรือ</title>
+  <meta name="description" content="ร้านไอติมท่าเรือ — ไอติมโฮมเมดสดใหม่ สีเขียว พร้อมเมนูกะทิซิกเนเจอร์" />
+
+   <!-- Google Fonts: Noto Sans Thai -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- เชื่อมไฟล์สไตล์หลัก -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- เชื่อมไฟล์สคริปต์หลัก -->
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="container wrap">
+    <h1><a href="index.html">ร้านไอติมท่าเรือ</a></h1>
+    <nav>
+      <a href="index.html" class="is-active">หน้าแรก</a>
+      <a href="menu.html">เมนู</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Main content -->
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="container hero-wrap">
+          <div class="hero-text">
+            <h2>ไอติมโฮมเมด ทำสด หวานน้อย</h2>
+            <p>ครีมมี กลิ่นหอม เนื้อเนียน รสกลมกล่อม เหมาะกับทุกวัย</p>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="button button-primary" href="menu.html">ดูเมนู</a>
+              <a class="button button-outline" href="contact.html">ติดต่อเรา</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img
+              src="assets/images/logo.jpg"
+              alt="ไอติมโฮมเมด ร้านไอติมท่าเรือ"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+    <!-- เมนู -->
+<section id="menu">
+  <div class="container"
+       style="background:#f5fff7;border:1px solid #e8f5ef;border-radius:14px;padding:18px;box-shadow:0 8px 22px rgba(30,194,139,.08);">
+    <h3 style="font-size:1.4rem; font-weight:900; margin-bottom:12px;">เมนูวันนี้</h3>
+
+    <div class="grid grid-3">
+      <!-- กะทิ -->
+      <article class="card">
+        <img class="card-img" src="assets/images/กะทิ.png" alt="กะทิ">
+        <div class="card-body">
+          <h3>กะทิ</h3>
+          <p>หอมมันจากกะทิสด ทำสดทุกวัน</p>
+          <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โค่น 15฿ · ขนม 30฿</div>
+          <div class="badges">
+            <span class="badge badge--new">เมนูใหม่</span>
+            <span class="badge">โฮมเมด</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ช็อกโกแลตชิพ -->
+      <article class="card">
+        <img class="card-img" src="assets/images/ช็อคโกแล็ตชิพ.png" alt="ช็อกโกแลตชิพ">
+        <div class="card-body">
+          <h3>ช็อกโกแลตชิพ</h3>
+          <p>ช็อกโกแลตเข้มข้นพร้อมชิพกรุบ</p>
+          <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โค่น 15฿ · ขนม 30฿</div>
+          <div class="badges">
+            <span class="badge">ฮิต</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- วนิลา -->
+      <article class="card">
+        <img class="card-img" src="assets/images/วนิลาชิพ.png" alt="วนิลา">
+        <div class="card-body">
+          <h3>วนิลาชิพ</h3>
+          <p>วนิลาหอมๆ พร้อมช็อกโกแลตชิพ</p>
+          <div class="price">ถ้วยเล็ก 20฿ · ถ้วยใหญ่ 25฿ · โค่น 15฿ · ขนม 30฿</div>
+        </div>
+      </article>
+
+    <div style="margin-top:12px;">
+      <a class="button button-primary" href="menu.html">ดูเมนูทั้งหมด</a>
+    </div>
+  </div>
+</section>
+
+    <!-- ติดต่อ -->
+    <section id="contact">
+      <div class="container">
+        <h3 style="font-size:1.4rem; font-weight:900; margin-bottom:8px;">ติดต่อ</h3>
+        <p style="color:#6b7280;">โทร: 098-568-9830 • LINE: ไม่มีเพิ่งสร้าง</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ฟุตเตอร์ -->
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> ร้านไอติมท่าเรือ</small>
+    </div>
+  </footer>
+</body>
+</html>
+<script>
+  // แสดงปีปัจจุบันในฟุตเตอร์
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+<header>
+  <div class="container wrap">
+    <h1 class="logo-title">
+      <img src="./assets/images/logo.jpg" alt="โลโก้ร้านไอติมท่าเรือ" />
+      <a href="index.html">ร้านไอติมท่าเรือ</a>
+    </h1>
+    <nav>
+      <a href="index.html" class="is-active">หน้าแรก</a>
+      <a href="menu.html">เมนู</a>
+      <a href="contact.html">ติดต่อ</a>
+    </nav>
+  </div>
+</header>
+
